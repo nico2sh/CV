@@ -1,0 +1,162 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.3, 30 April 2017) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you want to use \orcid or the
+%% academicons icons, add "academicons"
+%% to the \documentclass options.
+%% Then compile with XeLaTeX or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% When using the "academicons" option,
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font %% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=0.4cm,bottom=0.4cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Nicolás Hormazábal}
+\tagline{Software Engineer \& Geek}
+
+\photo{2.5cm}{nico}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{mail@nico.red}
+  \phone{+34 666134936}
+  \mailaddress{C/ Marqués Caldes de Montbui 27 3-2, 17003}
+  \location{Girona, Spain}
+  \homepage{nico.red}
+  \twitter{@pnikosis}
+  \linkedin{linkedin.com/in/nhormazabal}
+  \github{github.com/pnikosis}
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[nico-p1sidebar]{Experience}
+
+\cvevent{Engineering Manager}{Schibsted Product \& Technology}{Nov 2016 -- Ongoing}{Barcelona, Spain}
+\begin{itemize}
+	\item Led the Notifications team to develop a mature product, used in several sites across the company for delivering notifications with high engagement impact.
+	\item Contributed and lead experimentation to develop new features in collaboration with other teams.
+\end{itemize}
+
+\divider
+
+\cvevent{Tech Lead}{Schibsted Product \& Technology}{Nov 2015 -- Nov 2016}{Barcelona, Spain}
+\begin{itemize}
+	\item Design, develop and coordinate the Notifications team to create a scalable, performing service.
+	\item Defined and prioritized the product requirements for the notifications service defining its requirements and applying an integration roadmap.
+\end{itemize}
+
+\divider
+
+\cvevent{Android Tech Lead}{Schibsted Product \& Tech}{March 2014 -- Nov 2015}{Barcelona, Spain}
+
+\begin{itemize}
+	\item Lead the Android Mobile team to develop the NextGen app.
+	\item Coordinated the different local development teams for the integration and branding of the NextGen app for the local markets.
+\end{itemize}
+
+\divider	
+
+\cvevent{Software Engineer}{Freelance}{June 2013 -- Feb 2014}{Barcelona/Girona, Spain}
+
+\begin{itemize}
+	\item Software development as a freelance. Mostly native mobile apps on Android and interactive software.
+	\item Developed a custom personalization layer for a family friendly tablet (for FACTIS/Milan: https://www.milan.es/).
+\end{itemize}
+
+\divider	
+
+\cvevent{Software Engineer/Researcher}{Centre Easy Innova/Universitat de Girona/Fatronik-Tecnalia}{Apr 2008 -- Jun 2013}{Girona/Gipúzkoa, Spain}
+
+\begin{itemize}
+	\item Several tasks as a researcher and software engineer during a PhD process.
+	\item Main research topic in Artificial Intelligence/Virtual Organizations and Trust \& Reputation systems.
+\end{itemize}
+
+\divider
+
+\cvevent{Software Developer}{Freelance/Inoxpa}{2003 -- 2008}{Girona, Spain}
+
+\begin{itemize}
+	\item Several small software (web and desktop) development projects.
+\end{itemize}
+
+\cvsection{A Regular Week}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+\wheelchart{1.3cm}{0.3cm}{%
+  5/12em/accent!10/Cooking for the family,
+  20/14em/accent!50/Sync with the team and make sure they feel motivated,
+  10/14em/accent!20/Comics videogames and other non-grown up stuff,
+  20/12em/accent!40/My own kids!,
+  15/12em/accent!30/Define roadmap sync with product and plan,
+  10/10em/accent!60/Catching up with tech on news and learning new stuff,
+  10/12em/accent/Review the team's work,
+  10/14em/accent!30/Actual software development
+}
+
+
+
+\end{document}
